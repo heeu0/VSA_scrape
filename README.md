@@ -1,26 +1,26 @@
 # Eventbrite Attendee Importer for Google Sheets
 
-This project is a Google Apps Script that automatically imports attendee data from an Eventbrite event into Google Sheets. It supports syncing name, email, and answers to custom questions like pronouns, allergies, and accessibility accommodations — formatted exactly for live event check-ins (e.g., Vietnamese Student Association events).
+This project is a Google Apps Script that automatically imports attendee data from an Eventbrite event into Google Sheets. It supports syncing name, email, and answers to custom questions like pronouns, allergies, and accessibility accommodations.
 
 ---
 
-## 🚀 Features
+## Features
 
-- Pulls **all attendees** via Eventbrite API (pagination supported)
-- Filters out incomplete or placeholder entries (e.g., "Info Requested")
+- Pulls **all attendees** via Eventbrite API
+- Filters out incomplete or placeholder entries (e.g., "Info Requested", empty entries)
 - Syncs attendee details including:
   - Name
   - Email
   - Pronouns
   - Allergies
   - Accommodations
-  - Custom affiliation/relationship
+  - etc
 - Adds checkbox columns for day-of check-in
 - Resets and refreshes the sheet every time it's run
 
 ---
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 1. **Get your Eventbrite Token**
    - Go to [eventbrite.com/platform/api-keys](https://www.eventbrite.com/platform/api-keys)
@@ -29,7 +29,7 @@ This project is a Google Apps Script that automatically imports attendee data fr
 2. **Find your Event ID**
    - You can find this in the event URL:  
      `https://www.eventbrite.com/myevent?eid=1309245702139`  
-     → Your Event ID is `1309245702139`
+     → My Event ID is `1309245702139`
 
 3. **Open Google Sheets**
    - Go to `Extensions > Apps Script`
@@ -53,17 +53,10 @@ This project is a Google Apps Script that automatically imports attendee data fr
 
 ---
 
-## ⚙️ Customization
+## Customization
 
 To change which questions are pulled from Eventbrite (e.g., “pronouns”, “allergies”), update the keywords in the `getAnswer()` function inside the script.
 
 You can also adjust the output columns by modifying the `headers` and `row` arrays.
 
----
-
-## 🙋‍♂️ Contact
-
-Created by Hieu Nguyen for VSA Seattle  
-📧 hieun4@uw.edu  
-[LinkedIn](https://linkedin.com/in/hieun4)
 
